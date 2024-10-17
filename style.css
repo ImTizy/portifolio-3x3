@@ -1,0 +1,116 @@
+body {
+    background-image: url(imagens/roxo.png);
+}
+
+header {
+    background-color: rgb(122, 32, 145);
+    padding: 50px;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 60px;
+    transform: scaleY(1.9);
+}
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+    
+}
+.box {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+.box img{
+    width: 100px;
+}
+nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+nav a:hover {
+    color:rgb(165, 81, 221);
+    text-decoration: none;
+    transform: scaleX(1.6);
+}
+
+/* index */
+.home{
+    background-image: url(imagens/Fundo.png);
+    background-size: cover;
+    padding: 370px 100px;
+}
+.home h1{
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+
+/* creditos */
+.creditos{
+    margin: 0px;
+    text-align: center;
+}
+.creditos h1{
+    font-size: 50px;
+    margin: 0 0 100x;
+}
+.creditos p{
+    font-size: 20px;
+}
+#jeam{
+    width: 30%;
+}
+#luan{
+    width: 30%;
+}
+
+
+/*Pasta*/
+.pasta{
+    padding: 300px 100px;
+}
+.trabalhos{
+    position: absolute;
+    top: 200px;
+    left: 10px;
+}
+.trabalhos li {
+    display: inline;
+    margin: 0 0 0 60px;
+    
+}
+.trabalhos a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    padding-left: 190px;
+}
+.trabalhos a:hover{
+    color:rgb(153, 153, 153);
+    transition: 450ms ease-in-out;
+}
+footer{
+    background-color: rgb(71, 0, 88);
+    text-align: center;
+    padding: 10px 47%;
+    position: absolute;
+    bottom: 0%;
+    color: white;
+}
+footer img{
+    width: 100px;
+}
+
+.nav li a {
+    transform: scaleX(1.6);
+}

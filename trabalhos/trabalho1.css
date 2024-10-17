@@ -1,0 +1,26 @@
+.csstrabalho1 {
+    text-align: center;
+    margin: 320px;
+}
+
+.back {
+    width: 23px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.voltar {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+    text-decoration: none;
+    color:rgb(41, 41, 41);
+    transition: 450ms ease-in-out;
+
+}
+
+hover a {
+    transition: 500ms ease-in-out;
+    color: pink;
+}
