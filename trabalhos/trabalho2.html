@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="trabalho2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(136, 97, 161);
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color:rgb(172, 102, 219);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:rgb(75, 38, 99);
+            transition: 250ms ease-in-out;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #006400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calcule seu IMC</h1>
+        <p>Veja a sua massa corporal e receba uma mensagem personalizada.</p>
+        
+        <label for="altura">Sua altura (em metros):</label><br>
+        <input type="number" id="altura" placeholder=""><br>
+        
+        <label for="peso">Seu peso (kg):</label><br>
+        <input type="number" id="peso" placeholder=""><br>
+        
+        <button onclick="calcularIMC()">Calcular</button>
+        
+        <div class="resultado" id="resultado"></div>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const altura = parseFloat(document.getElementById('altura').value);
+            const peso = parseFloat(document.getElementById('peso').value);
+
+            if (isNaN(altura) || isNaN(peso)) {
+                document.getElementById('resultado').innerHTML = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            const imc = peso / (altura * altura);
+            let mensagem = '';
+
+            if (imc < 18.5) {
+                mensagem = "Você está abaixo do peso. Que tal melhorar sua alimentação?";
+            } else if (imc >= 18.5 && imc < 24.9) {
+                mensagem = "Parabéns! Você está com o peso ideal! Continue assim.";
+            } else if (imc >= 25 && imc < 29.9) {
+                mensagem = "Aviso! Você está acima do peso. Vamos focar em hábitos alimentares e exercícios?";
+            } else {
+                mensagem = "Atenção! Seu IMC indica obesidade. Uma reeducação alimentar é essencial.";
+            }
+
+            document.getElementById('resultado').innerHTML = `Seu IMC é ${imc.toFixed(2)}. ${mensagem}`;
+        }
+    </script>
+    <footer>
+        <a class="voltar" href="../index.html">
+            <img class="back" src="../imagens/caret-left-solid.svg"></img>
+            <p>Voltar</p>
+        </footer>
+</body>
+</html>
