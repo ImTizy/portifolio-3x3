@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="trabalho4.css">
+</head>
+<body>
+    <h1>Jogo da memória</h1>
+
+    <h2>Timer</h2>
+    <div id="timer">0</div>
+    <button id="iniciarBotao">Iniciar Timer</button>
+
+    <script>
+        let timer;
+        let seconds = 0;
+
+        document.getElementById('iniciarBotao').addEventListener('click', function() {
+            clearInterval(timer);
+            
+            seconds = 0;
+
+            document.getElementById('timer').textContent = seconds;
+
+
+            timer = setInterval(function() {
+                seconds++;
+                document.getElementById('timer').textContent = seconds;
+            }, 1000);
+        });
+    </script>
+    
+    <a href="trabalho4.html" class="backbt">Reset</a>
+
+
+    <div class="game-container" id="game-container"></div>
+
+
+    <audio id="success-sound" src="success.mp3"></audio>
+    
+
+
+    <audio id="fail-sound" src="fail.mp3"></audio>
+
+
+    <script src="script.js"></script>
+    
+    <a href="../index.html" class="backbt2">Voltar para a tela inicial</a>
+    
+    
+</body>
+</html>
