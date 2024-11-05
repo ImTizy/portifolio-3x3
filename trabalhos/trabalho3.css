@@ -73,3 +73,53 @@ hover a {
     transition: 500ms ease-in-out;
     color: pink;
 }
+
+.backbt {
+    background-color: #842db6;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px;
+    text-decoration: none;
+  }
+  
+  .backbt2 {
+    background-color: #7520bb;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px;
+    text-decoration: none;
+  }
+  
+  
+  .backbt:hover {
+    background-color: #7c0494;
+    transform: translateY(-2px);
+  }
+  
+  .backbt:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .backbt2:hover {
+    background-color: #3f0f66;
+    transform: translateY(-2px);
+  }
+  
+  .backbt2:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  

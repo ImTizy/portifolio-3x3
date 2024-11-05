@@ -24,3 +24,35 @@ hover a {
     transition: 500ms ease-in-out;
     color: pink;
 }
+
+.backbt2 {
+    font-size: 20px;
+    background-color: #7520bb;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding-bottom: 5;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+    text-decoration: none;
+    color:rgb(41, 41, 41);
+    transition: 450ms ease-in-out;
+  }
+  
+  
+  .backbt:hover {
+    background-color: #7c0494;
+    transform: translateY(-2px);
+  }
+  
+  .backbt:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .backbt2:hover {
+    background-color: #3f0f66;
+    transform: translateY(-2px);
+  }
+

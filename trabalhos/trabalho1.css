@@ -38,8 +38,8 @@ hover a {
 #ins {
     border-radius: 20px;
 }
-
-.backbt2 {
+  
+  .backbt2 {
     background-color: #7520bb;
     color: #ffffff;
     border: none;
@@ -51,7 +51,6 @@ hover a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 40px;
     text-decoration: none;
-
   }
   
   
@@ -69,9 +68,4 @@ hover a {
     background-color: #3f0f66;
     transform: translateY(-2px);
   }
-  
-  .backbt2:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
+

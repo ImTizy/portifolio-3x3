@@ -1,60 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="trabalho1.html">
-    <link rel="stylesheet" href="trabalho1.css">
-    <title>Trabalhos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Times de Basquete 3x3</title>
+  <link rel="stylesheet" href="trabalho1.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #aa6bca;
+      margin: 0;
+    }
+    .container {
+      background-color: rgb(216, 216, 216);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px rgba(92, 34, 151, 0.712);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 200px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #aa6bca;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #4c2063;
+    }
+    .feedback {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 18px;
+      color: white;
+    }
+    .green {
+        background-color: #62128a;
+    }
+    .red {
+      background-color: #f44336;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="csstrabalho1">
-    <h1>Basquete 3x3</h1>
-    <input type="number" id="inscritos" id="ins"placeholder="Inscritos" min="1">
-    <button id="ins" onclick="adicionarInscrito()">Adicionar Inscrito</button>
-    <div id="resultado"></div>
-    <div id="feedback" class="feedback"></div>
 
-    <script>
-        let totalInscritos = 0;
+  <div class="container">
+    <h2>Calculadora de times de basquete 3x3</h2>
+    <label for="interessados">Quantidade de interessados:</label>
+    <input type="number" id="interessados" placeholder="Digite o total de interessados" />
+    <br>
+    <button onclick="calcularTimes()">Calcular Times</button>
+    <div id="resultado" class="feedback"></div>
+  </div>
 
-        function adicionarInscrito() {
-            const inscritosInput = document.getElementById('inscritos');
-            const inscritos = parseInt(inscritosInput.value);
+  <script>
+    function calcularTimes() {
+      // Pegando o valor inserido
+      const interessados = document.getElementById("interessados").value;
 
-            if (inscritos && inscritos > 0) {
-                totalInscritos += inscritos;
-                inscritosInput.value = '';
-                calcularTimes();
-            } else {
-                alert("Por favor, insira um número válido.");
-            }
-        }
+      // Verificando se o número inserido é válido
+      if (!interessados || interessados <= 0) {
+        alert("Por favor, insira um número válido de interessados.");
+        return;
+      }
 
-        function calcularTimes() {
-            const times = Math.floor(totalInscritos / 3);
-            const sobrando = totalInscritos % 3;
-            const resultadoDiv = document.getElementById('resultado');
-            const feedbackDiv = document.getElementById('feedback');
+      // Calculando a quantidade de times e o restante
+      const numTimes = Math.floor(interessados / 3);
+      const sobra = interessados % 3;
 
-            resultadoDiv.innerHTML = `Total de times formados: ${times}`;
-           
-            if (sobrando === 0) {
-                feedbackDiv.innerHTML = "Todos os inscritos foram alocados em times!";
-                feedbackDiv.className = "feedback verde";
-            } else {
-                feedbackDiv.innerHTML = `Sobram ${sobrando} inscritos que não podem formar um time.`;
-                feedbackDiv.className = "feedback vermelho";
-            }
-        }
-    </script>
+      // Mostrando o resultado na tela
+      const resultado = document.getElementById("resultado");
+
+      if (sobra === 0) {
+        // Se não sobrar ninguém, feedback verde
+        resultado.textContent = `Pode formar ${numTimes} times completos!`;
+        resultado.className = "feedback green";
+      } else {
+        // Se sobrar, feedback vermelho
+        resultado.textContent = `Pode formar ${numTimes} times completos e sobra ${sobra} aluno(s) sem time.`;
+        resultado.className = "feedback red";
+      }
+    }
+  </script>
 
 <a href="../index.html" class="backbt2">Voltar para a tela inicial</a>
-    </div>
     
-</body>
-
     
 </body>
 </html>
